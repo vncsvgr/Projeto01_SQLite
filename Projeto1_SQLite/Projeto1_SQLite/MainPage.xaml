@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto1_SQLite.MainPage">
+
+    <StackLayout>
+
+        <Frame BackgroundColor="#003048" Padding="20" >
+            <Label Text="Alunos" HorizontalTextAlignment="Center" FontSize="36" FontAttributes="Bold" TextColor="White" />
+        </Frame>
+
+        <Entry Placeholder="Digite o ID do aluno para pesquisa" x:Name="edtIdAluno" />
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnPesquisar" Text="Pesquisar" Clicked="btnPesquisar_Clicked" HorizontalOptions="FillAndExpand" />
+            <Button x:Name="btnLimpar" Text="Limpar" Clicked="btnLimpar_Clicked" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <Entry Placeholder="Nome do aluno" x:Name="edtNome" />
+        <Entry Placeholder="Curso do aluno" x:Name="edtCurso" />
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnAdicionar" Text="Adicionar" Clicked="btnAdicionar_Clicked" HorizontalOptions="FillAndExpand" />
+            <Button x:Name="btnAtualizar" Text="Atualizar" Clicked="btnAtualizar_Clicked" HorizontalOptions="FillAndExpand" />
+            <Button x:Name="btnExcluir" Text="Excluir" Clicked="btnExcluir_Clicked" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <Button x:Name="btnFinalizar" Text="Finalizar o Aplicativo" Clicked="btnFinalizar_Clicked" />
+
+    </StackLayout>
+
+</ContentPage>
