@@ -19,7 +19,23 @@ namespace Projeto1_SQLite
 
         private void btnPesquisar_Clicked(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(edtIdAluno.Text))
+            {
+                DisplayAlert("Atenção", "Por favor insira o ID do aluno", "OK");
+                return;
+            }
 
+            Aluno a = db.Consultar(int.Parse(edtIdAluno.Text));
+            if(a != null)
+            {
+                edtNome.Text = a.Nome;
+                edtCurso.Text = a.Curso;
+            }
+            else
+            {
+                DisplayAlert("Pesquisa", "Aluno não encontrado", "OK");
+                btnLimpar_Clicked(sender, e);
+            }
         }
 
         private void btnLimpar_Clicked(object sender, EventArgs e)
